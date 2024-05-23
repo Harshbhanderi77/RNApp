@@ -17,11 +17,11 @@ export const Loginbutton: React.FC<screenName> = ({
   switch (screenName) {
     case 'Login':
       text = 'Login';
-      text1 = 'Singin';
+      text1 = 'Sing-up';
       text2 = "Don't have any account? ";
       break;
-    case 'Singin':
-      text = 'Singin';
+    case 'Sing-up':
+      text = 'Sing-up';
       text1 = 'Login';
       text2 = 'You have account? ';
       break;
@@ -34,7 +34,7 @@ export const Loginbutton: React.FC<screenName> = ({
   const handalbutton = () => {
     if (screenName === 'Login') {
       replace({screenName: Routes.Singin});
-    } else if (screenName === 'Singin') {
+    } else if (screenName === 'Sing-up') {
       replace({screenName: Routes.Login});
     }
   };

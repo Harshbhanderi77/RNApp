@@ -60,11 +60,19 @@ export const Splashscreen: React.FC = () => {
           marginHorizontal: 14,
           marginTop: 26,
           borderRadius: 20,
+          flexDirection: 'row',
         }}
         onPress={() => replace({screenName: Routes.Login})}>
-        <Text style={{color: color.orange, fontSize: 22, fontWeight: '600'}}>
+        <Text
+          style={{
+            color: color.orange,
+            fontSize: 22,
+            fontWeight: '600',
+            marginRight: 10,
+          }}>
           Get Start
         </Text>
+        <Image source={Images.rightarrow} style={{width: 26, height: 26}} />
       </Pressable>
     </View>
   );

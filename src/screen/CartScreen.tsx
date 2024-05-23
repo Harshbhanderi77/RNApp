@@ -193,65 +193,6 @@ export const CartScreen: React.FC = () => {
         renderItem={({item, index}) => {
           return (
             <View>
-              <Modal
-                transparent={true}
-                animationType={'slide'}
-                visible={modelVisible}
-                onPress={() => setModalVisible(!modelVisible)}>
-                <View
-                  style={{
-                    flex: 1,
-                    justifyContent: 'center',
-                    alignItems: 'center',
-                  }}>
-                  <View
-                    style={{
-                      backgroundColor: color.white,
-                      borderRadius: 20,
-                      elevation: 22,
-                      borderWidth: 1,
-                      borderColor: color.green,
-                    }}>
-                    <TouchableOpacity
-                      onPress={() => setModalVisible(!modelVisible)}
-                      style={{
-                        alignItems: 'flex-end',
-                        justifyContent: 'center',
-                        top: -4,
-                      }}>
-                      <Image
-                        source={Images.removbtn}
-                        style={{height: 24, width: 24}}
-                      />
-                    </TouchableOpacity>
-                    <View
-                      style={{
-                        alignItems: 'center',
-                        marginHorizontal: 34,
-                        paddingVertical: 16,
-                      }}>
-                      <Image
-                        source={Images.qrcodeh}
-                        style={{
-                          width: 200,
-                          height: 200,
-                          marginVertical: 0,
-                          resizeMode: 'cover',
-                        }}
-                      />
-                      <Text
-                        style={{
-                          color: color.black,
-                          fontWeight: '600',
-                          fontSize: 22,
-                          marginTop: 10,
-                        }}>
-                        Paymeny Bill
-                      </Text>
-                    </View>
-                  </View>
-                </View>
-              </Modal>
               <Pressable onPress={() => navigate({screenName: Routes.Cart})}>
                 <View style={styles.maincomponent}>
                   <Pressable
@@ -345,11 +286,69 @@ export const CartScreen: React.FC = () => {
             paddingVertical: 5,
             paddingHorizontal: 26,
             elevation: 4,
+            borderWidth: 1,
+            // borderColor: color.green,
           }}>
           <Text style={styles.totalText}>Total</Text>
           <Text style={styles.rat}>$.{totalitemprice()}</Text>
         </View>
       </View>
+      <Modal
+        transparent={true}
+        animationType={'slide'}
+        visible={modelVisible}
+        onRequestClose={() => setModalVisible(false)}>
+        <View
+          style={{
+            flex: 1,
+            justifyContent: 'center',
+            alignItems: 'center',
+          }}>
+          <View
+            style={{
+              backgroundColor: color.white,
+              borderRadius: 20,
+              elevation: 22,
+              borderWidth: 1,
+              borderColor: color.green,
+            }}>
+            <TouchableOpacity
+              onPress={() => setModalVisible(false)}
+              style={{
+                alignItems: 'flex-end',
+                justifyContent: 'center',
+                top: -4,
+              }}>
+              <Image source={Images.removbtn} style={{height: 24, width: 24}} />
+            </TouchableOpacity>
+            <View
+              style={{
+                alignItems: 'center',
+                marginHorizontal: 34,
+                paddingVertical: 16,
+              }}>
+              <Image
+                source={Images.qrcodeh}
+                style={{
+                  width: 200,
+                  height: 200,
+                  marginVertical: 0,
+                  resizeMode: 'cover',
+                }}
+              />
+              <Text
+                style={{
+                  color: color.black,
+                  fontWeight: '600',
+                  fontSize: 22,
+                  marginTop: 10,
+                }}>
+                Paymeny Bill
+              </Text>
+            </View>
+          </View>
+        </View>
+      </Modal>
     </View>
   );
 };

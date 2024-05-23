@@ -78,7 +78,7 @@ export const SinginScreen: React.FC = () => {
       setNameError('Name is required ');
       isValid = false;
     } else if (name.length < 4 || name.length > 15) {
-      setNameError('Name is required length');
+      setNameError('Name is required 4 characters');
       isValid = false;
     } else {
       setNameError('');
@@ -141,7 +141,7 @@ export const SinginScreen: React.FC = () => {
         <View style={{justifyContent: 'center', marginTop: 16}}>
           <View style={{alignItems: 'center'}}>
             <Text style={{color: color.black, fontSize: 30, fontWeight: '600'}}>
-              Singin
+              Sing-up
             </Text>
           </View>
           {inputArrar.map(item => (
@@ -171,7 +171,7 @@ export const SinginScreen: React.FC = () => {
               {showPassword ? 'Hide Password' : 'Show Password'}
             </Text>
           </TouchableOpacity>
-          <Loginbutton screenName={'Singin'} onPress={handleLoginPress} />
+          <Loginbutton screenName={'Sing-up'} onPress={handleLoginPress} />
         </View>
       </ScrollView>
     </View>

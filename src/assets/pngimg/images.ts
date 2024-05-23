@@ -7,4 +7,5 @@ export const Images = {
   splashscreenimg: require('./splashscreenimg.png'),
   qrcodeh: require('./qrcodeh.jpg'),
   appqrcode: require('./appqrcode.png'),
+  rightarrow: require('./rightarrow.png'),
 };
