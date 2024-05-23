@@ -328,7 +328,7 @@ export const CartScreen: React.FC = () => {
                 paddingVertical: 16,
               }}>
               <Image
-                source={Images.qrcodeh}
+                source={Images.appqrcode}
                 style={{
                   width: 200,
                   height: 200,
