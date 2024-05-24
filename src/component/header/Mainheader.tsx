@@ -20,7 +20,7 @@ export const Mainheader: React.FC = () => {
           fontSize: 24,
           fontWeight: '700',
         }}>
-        FOOD APP
+        RN FOOD APP
       </Text>
       <Logout />
     </View>

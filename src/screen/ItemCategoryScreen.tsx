@@ -190,7 +190,7 @@ export const ItemCategoryScreen: React.FC = () => {
                         {item.ItemQuentity}
                       </Text>
                     </View>
-                    <Text style={{color: color.black, marginTop: 10}}>
+                    <Text style={{color: color.black, marginTop: 8}}>
                       Discover the joy of a truly{'\n'}nourishing meal.
                     </Text>
                   </View>
@@ -234,13 +234,13 @@ const styles = StyleSheet.create({
   },
   itemname: {
     color: color.black,
-    fontSize: 20,
+    fontSize: 18,
     fontWeight: '600',
   },
   itemimg: {
     top: -26,
-    height: 130,
-    width: 130,
+    height: 120,
+    width: 120,
     borderRadius: 80,
     resizeMode: 'cover',
     borderWidth: 2,

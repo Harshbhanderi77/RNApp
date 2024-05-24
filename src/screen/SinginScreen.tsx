@@ -140,7 +140,7 @@ export const SinginScreen: React.FC = () => {
         <Logoscreen />
         <View style={{justifyContent: 'center', marginTop: 16}}>
           <View style={{alignItems: 'center'}}>
-            <Text style={{color: color.black, fontSize: 30, fontWeight: '600'}}>
+            <Text style={{color: color.black, fontSize: 26, fontWeight: '600'}}>
               Sing-up
             </Text>
           </View>

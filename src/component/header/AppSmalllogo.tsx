@@ -11,7 +11,7 @@ export const AppSmalllogo: React.FC = () => {
       <View
         style={{
           backgroundColor: color.white,
-          padding: 0,
+          padding: 2,
           borderRadius: 24,
           elevation: 12,
           borderColor: color.green,
@@ -20,8 +20,8 @@ export const AppSmalllogo: React.FC = () => {
         <Image
           source={Images.applogo}
           style={{
-            width: 40,
-            height: 40,
+            width: 38,
+            height: 38,
           }}
         />
       </View>

@@ -18,7 +18,7 @@ const styles = StyleSheet.create({
     fontFamily: 'styleUpdater',
     color: color.orange,
     marginTop: 20,
-    fontSize: 40,
+    fontSize: 34,
     fontWeight: '700',
     marginHorizontal: 12,
   },

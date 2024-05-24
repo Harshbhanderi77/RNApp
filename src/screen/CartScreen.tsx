@@ -200,7 +200,7 @@ export const CartScreen: React.FC = () => {
                       padding: 10,
                       top: -16,
                       position: 'absolute',
-                      marginLeft: -12,
+                      marginLeft: -16,
                     }}
                     onPress={() => removeItemFromCart(item.ItemId)}>
                     <Image
@@ -212,7 +212,7 @@ export const CartScreen: React.FC = () => {
                     style={{justifyContent: 'center', paddingHorizontal: 10}}>
                     <Text style={styles.itemname}>{item.ItemName}</Text>
                     {/*<Text style={styles.itemquentity}>{item.ItemQuentity}</Text>*/}
-                    <Text style={{color: color.black, marginTop: 10}}>
+                    <Text style={{color: color.black, marginTop: 8}}>
                       Discover the joy of a truly{'\n'}nourishing meal.
                     </Text>
                     <View
@@ -249,8 +249,8 @@ export const CartScreen: React.FC = () => {
                       source={{uri: item.ItemImage}}
                       style={{
                         top: -26,
-                        height: 130,
-                        width: 130,
+                        height: 120,
+                        width: 120,
                         borderRadius: 80,
                         resizeMode: 'cover',
                         borderWidth: 2,
@@ -371,7 +371,7 @@ const styles = StyleSheet.create({
   },
   itemname: {
     color: color.black,
-    fontSize: 20,
+    fontSize: 18,
     fontWeight: '600',
   },
   itemquentity: {
