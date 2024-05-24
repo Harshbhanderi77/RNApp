@@ -93,7 +93,7 @@ export const Loginscreen: React.FC = () => {
       <ScrollView>
         <LoginScreentext />
         <Logoscreen />
-        <View style={{justifyContent: 'center', marginTop: 20}}>
+        <View style={{justifyContent: 'center', marginTop: 10}}>
           <View style={{alignItems: 'center'}}>
             <Text style={{color: color.black, fontSize: 26, fontWeight: '600'}}>
               Login

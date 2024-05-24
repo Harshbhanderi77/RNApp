@@ -91,14 +91,14 @@ const styles = StyleSheet.create({
     marginBottom: 10,
   },
   Itmeimage: {
-    height: 80,
-    width: 80,
+    height: 60,
+    width: 60,
     borderRadius: 100,
     resizeMode: 'cover',
   },
   Itemname: {
     color: color.black,
-    fontSize: 16,
+    fontSize: 12,
     fontWeight: '600',
     marginTop: 5,
   },

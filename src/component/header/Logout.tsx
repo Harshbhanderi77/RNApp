@@ -10,7 +10,7 @@ export const Logout: React.FC = () => {
       <Pressable
         style={{
           backgroundColor: color.green,
-          padding: 10,
+          padding: 8,
           borderRadius: 24,
           elevation: 12,
         }}

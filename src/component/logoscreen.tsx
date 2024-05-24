@@ -1,5 +1,5 @@
 import React from 'react';
-import {Image, View} from 'react-native';
+import {Image, Text, View} from 'react-native';
 import {color} from '../style/color';
 import {Images} from '../assets/pngimg/images';
 
@@ -25,6 +25,9 @@ export const Logoscreen: React.FC = () => {
           <Image source={Images.applogo} style={{width: 100, height: 100}} />
         </View>
       </View>
+      <Text style={{color: color.black, fontSize: 16, fontWeight: '600'}}>
+        RN Food App
+      </Text>
     </View>
   );
 };

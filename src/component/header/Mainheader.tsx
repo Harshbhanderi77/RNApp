@@ -17,7 +17,7 @@ export const Mainheader: React.FC = () => {
       <Text
         style={{
           color: color.orange,
-          fontSize: 24,
+          fontSize: 20,
           fontWeight: '700',
         }}>
         RN FOOD APP

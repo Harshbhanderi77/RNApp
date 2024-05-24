@@ -11,7 +11,7 @@ import {InputLogin} from '../component/categoryslider/InputLogin';
 import {replace, Routes} from '../screennavigation/Navigation';
 import {Loginbutton} from '../component/Button/loginbutton';
 import {Logoscreen} from '../component/logoscreen';
-import { LoginScreentext } from "../component/LoginScreentext";
+import {LoginScreentext} from '../component/LoginScreentext';
 
 export const SinginScreen: React.FC = () => {
   const [name, setName] = useState('');
@@ -138,7 +138,7 @@ export const SinginScreen: React.FC = () => {
       <ScrollView>
         <LoginScreentext />
         <Logoscreen />
-        <View style={{justifyContent: 'center', marginTop: 16}}>
+        <View style={{justifyContent: 'center', marginTop: 12}}>
           <View style={{alignItems: 'center'}}>
             <Text style={{color: color.black, fontSize: 26, fontWeight: '600'}}>
               Sing-up

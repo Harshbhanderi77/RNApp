@@ -173,8 +173,7 @@ export const ItemCategoryScreen: React.FC = () => {
             <View>
               <Pressable onPress={() => addToCart(item.ItemId)}>
                 <View style={styles.maincomponent}>
-                  <View
-                    style={{justifyContent: 'center', paddingHorizontal: 10}}>
+                  <View style={{justifyContent: 'center'}}>
                     <Text style={styles.itemname}>{item.ItemName}</Text>
                     <View
                       style={{
@@ -184,13 +183,14 @@ export const ItemCategoryScreen: React.FC = () => {
                       }}>
                       <Image
                         source={Images.quantity}
-                        style={{width: 16, height: 16}}
+                        style={{width: 14, height: 14}}
                       />
                       <Text style={styles.itemquantity}>
                         {item.ItemQuentity}
                       </Text>
                     </View>
-                    <Text style={{color: color.black, marginTop: 8}}>
+                    <Text
+                      style={{color: color.black, marginTop: 10, fontSize: 12}}>
                       Discover the joy of a truly{'\n'}nourishing meal.
                     </Text>
                   </View>
@@ -198,7 +198,7 @@ export const ItemCategoryScreen: React.FC = () => {
                     style={{
                       alignItems: 'center',
                       justifyContent: 'center',
-                      marginHorizontal: 10,
+                      // marginHorizontal: 10,
                     }}>
                     <Image
                       source={{uri: item.ItemImage}}
@@ -223,7 +223,8 @@ const styles = StyleSheet.create({
     marginTop: 50,
     marginLeft: 10,
     marginRight: 10,
-    marginHorizontal: 10,
+    marginHorizontal: 12,
+    paddingHorizontal: 12,
     alignItems: 'center',
     backgroundColor: color.white,
     borderWidth: 1,
@@ -239,22 +240,22 @@ const styles = StyleSheet.create({
   },
   itemimg: {
     top: -26,
-    height: 120,
-    width: 120,
+    height: 100,
+    width: 100,
     borderRadius: 80,
     resizeMode: 'cover',
     borderWidth: 2,
   },
   itemquantity: {
     color: color.black,
-    fontSize: 14,
+    fontSize: 12,
     fontWeight: '600',
     marginLeft: 6,
   },
   itemprice: {
     color: color.black,
     top: -16,
-    fontSize: 16,
+    fontSize: 14,
     fontWeight: '600',
   },
 });

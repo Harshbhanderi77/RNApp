@@ -20,8 +20,8 @@ export const AppSmalllogo: React.FC = () => {
         <Image
           source={Images.applogo}
           style={{
-            width: 38,
-            height: 38,
+            width: 36,
+            height: 36,
           }}
         />
       </View>

@@ -18,7 +18,7 @@ export const CustomHeader: React.FC<CartheaderProps> = ({label}) => {
       <View
         style={{
           backgroundColor: color.white,
-          padding: 0,
+          padding: 2,
           borderRadius: 24,
           elevation: 12,
           borderColor: color.green,
@@ -27,8 +27,8 @@ export const CustomHeader: React.FC<CartheaderProps> = ({label}) => {
         <Image
           source={Images.applogo}
           style={{
-            width: 40,
-            height: 40,
+            width: 36,
+            height: 36,
           }}
         />
       </View>
@@ -49,16 +49,16 @@ const styles = StyleSheet.create({
   backButton: {
     backgroundColor: color.green,
     borderRadius: 50,
-    padding: 10,
+    padding: 8,
     elevation: 12,
   },
   backButtonImage: {
-    width: 26,
-    height: 25,
+    width: 24,
+    height: 24,
   },
   headerText: {
     color: color.orange,
-    fontSize: 24,
+    fontSize: 20,
     fontWeight: '600',
   },
 });

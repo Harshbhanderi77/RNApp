@@ -159,7 +159,7 @@ export const ItemSlider: React.FC = () => {
               <Pressable onPress={() => addToCart(item.ItemId)}>
                 <View style={styles.maincomponent}>
                   <View
-                    style={{justifyContent: 'center', paddingHorizontal: 10}}>
+                    style={{justifyContent: 'center', paddingHorizontal: 0}}>
                     <Text style={styles.itemname}>{item.ItemName}</Text>
                     <View
                       style={{
@@ -169,13 +169,14 @@ export const ItemSlider: React.FC = () => {
                       }}>
                       <Image
                         source={Images.quantity}
-                        style={{width: 16, height: 16}}
+                        style={{width: 14, height: 14}}
                       />
                       <Text style={styles.itemquantity}>
                         {item.ItemQuentity}
                       </Text>
                     </View>
-                    <Text style={{color: color.black, marginTop: 10}}>
+                    <Text
+                      style={{color: color.black, marginTop: 10, fontSize: 12}}>
                       Discover the joy of a truly{'\n'}nourishing meal.
                     </Text>
                   </View>
@@ -183,7 +184,7 @@ export const ItemSlider: React.FC = () => {
                     style={{
                       alignItems: 'center',
                       justifyContent: 'center',
-                      marginHorizontal: 10,
+                      // marginHorizontal: 10,
                     }}>
                     <Image
                       source={{uri: item.ItemImage}}
@@ -207,8 +208,9 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     marginTop: 50,
     marginLeft: 10,
-    marginRight: 10,
-    marginHorizontal: 10,
+    marginRight: 12,
+    marginHorizontal: 12,
+    paddingHorizontal: 12,
     alignItems: 'center',
     backgroundColor: color.white,
     borderWidth: 1,
@@ -219,27 +221,27 @@ const styles = StyleSheet.create({
   },
   itemname: {
     color: color.black,
-    fontSize: 20,
+    fontSize: 18,
     fontWeight: '600',
   },
   itemimg: {
     top: -26,
-    height: 130,
-    width: 130,
+    height: 100,
+    width: 100,
     borderRadius: 80,
     resizeMode: 'cover',
     borderWidth: 2,
   },
   itemquantity: {
     color: color.black,
-    fontSize: 14,
+    fontSize: 12,
     fontWeight: '600',
     marginLeft: 6,
   },
   itemprice: {
     color: color.black,
     top: -16,
-    fontSize: 16,
+    fontSize: 14,
     fontWeight: '600',
   },
 });

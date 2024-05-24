@@ -209,10 +209,11 @@ export const CartScreen: React.FC = () => {
                     />
                   </Pressable>
                   <View
-                    style={{justifyContent: 'center', paddingHorizontal: 10}}>
+                    style={{justifyContent: 'center', paddingHorizontal: 8}}>
                     <Text style={styles.itemname}>{item.ItemName}</Text>
                     {/*<Text style={styles.itemquentity}>{item.ItemQuentity}</Text>*/}
-                    <Text style={{color: color.black, marginTop: 8}}>
+                    <Text
+                      style={{color: color.black, marginTop: 8, fontSize: 12}}>
                       Discover the joy of a truly{'\n'}nourishing meal.
                     </Text>
                     <View
@@ -249,8 +250,8 @@ export const CartScreen: React.FC = () => {
                       source={{uri: item.ItemImage}}
                       style={{
                         top: -26,
-                        height: 120,
-                        width: 120,
+                        height: 100,
+                        width: 100,
                         borderRadius: 80,
                         resizeMode: 'cover',
                         borderWidth: 2,
@@ -360,7 +361,8 @@ const styles = StyleSheet.create({
     marginTop: 50,
     marginLeft: 10,
     marginRight: 10,
-    marginHorizontal: 10,
+    marginHorizontal: 12,
+    paddingHorizontal: 12,
     alignItems: 'center',
     backgroundColor: color.white,
     borderWidth: 1,
@@ -371,12 +373,12 @@ const styles = StyleSheet.create({
   },
   itemname: {
     color: color.black,
-    fontSize: 18,
+    fontSize: 16,
     fontWeight: '600',
   },
   itemquentity: {
     color: color.black,
-    fontSize: 14,
+    fontSize: 12,
     fontWeight: '600',
     marginTop: 10,
   },
@@ -384,11 +386,11 @@ const styles = StyleSheet.create({
     color: color.black,
     fontWeight: 'bold',
     backgroundColor: color.orange2,
-    borderRadius: 7,
+    borderRadius: 8,
     alignItems: 'center',
     justifyContent: 'center',
-    paddingHorizontal: 10,
-    paddingVertical: 4,
+    paddingHorizontal: 8,
+    paddingVertical: 2,
   },
   quantitynumber: {
     color: color.black,

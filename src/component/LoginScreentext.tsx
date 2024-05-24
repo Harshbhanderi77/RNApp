@@ -17,8 +17,8 @@ const styles = StyleSheet.create({
   maintext: {
     fontFamily: 'styleUpdater',
     color: color.orange,
-    marginTop: 20,
-    fontSize: 34,
+    marginTop: 18,
+    fontSize: 32,
     fontWeight: '700',
     marginHorizontal: 12,
   },
