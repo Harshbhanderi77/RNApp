@@ -35,7 +35,7 @@ export const Splashscreen: React.FC = () => {
         <Text
           style={{
             color: color.black,
-            fontSize: 38,
+            fontSize: 34,
             fontWeight: '600',
             marginHorizontal: 12,
           }}>
