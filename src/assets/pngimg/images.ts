@@ -8,4 +8,9 @@ export const Images = {
   qrcodeh: require('./qrcodeh.jpg'),
   appqrcode: require('./appqrcode.png'),
   rightarrow: require('./rightarrow.png'),
+  maingujrati: require('./maingujrati.png'),
+  mainpanjabi: require('./mainpanjabi.png'),
+  mainchines: require('./mainchines.png'),
+  mainsouth: require('./mainsouth.png'),
+  mainmexicon: require('./mainmexicon.png'),
 };

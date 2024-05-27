@@ -2,37 +2,33 @@ import React from 'react';
 import {FlatList, Image, Pressable, StyleSheet, Text, View} from 'react-native';
 import {color} from '../../style/color';
 import {navigate, Routes} from '../../screennavigation/Navigation';
+import {Images} from '../../assets/pngimg/images';
 
 const ImageArray = [
   {
     Id: 1,
     CategoryName: 'Gujrati',
-    CategoryImage:
-      'https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTJZaXGHqJ0Bqkzg7hLPxgn9xczYhH0mkBZP_gYyBj0xGkgYPvQ',
+    CategoryImage: Images.maingujrati,
   },
   {
     Id: 2,
     CategoryName: 'Panjabi',
-    CategoryImage:
-      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFgkAk5PUJWgGvbiINJo6hcsmMQAGVOLlKYQ&usqp=CAU',
+    CategoryImage: Images.mainpanjabi,
   },
   {
     Id: 3,
     CategoryName: 'Chaines',
-    CategoryImage:
-      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSrl2gVFi9Du1gJ2isjGwpP6L-wckbJNxP4A&usqp=CAU',
+    CategoryImage: Images.mainchines,
   },
   {
     Id: 4,
     CategoryName: 'South Indian',
-    CategoryImage:
-      'https://t4.ftcdn.net/jpg/02/17/39/75/360_F_217397507_QmlPOR9ASQ0xWLnj4KJcbaw9UFUtR6kh.jpg',
+    CategoryImage: Images.mainsouth,
   },
   {
     Id: 5,
     CategoryName: 'Mexican ',
-    CategoryImage:
-      'https://t4.ftcdn.net/jpg/01/13/63/63/360_F_113636348_FPQO3sUu2ZA3HR9zOzM4lnSiWEdsoqwu.jpg',
+    CategoryImage: Images.mainmexicon,
   },
 ];
 export const Mainsclider: React.FC = () => {
@@ -60,7 +56,7 @@ export const Mainsclider: React.FC = () => {
                   <View style={{alignItems: 'center'}}>
                     <Image
                       style={styles.Itmeimage}
-                      source={{uri: item.CategoryImage}}
+                      source={item.CategoryImage}
                     />
                   </View>
                 </Pressable>

@@ -113,7 +113,7 @@ const MenuitemArray = [
     ItemPrice: '170.00',
     ItemQuentity: '150ml',
     ItemImage:
-      'https://www.simplyrecipes.com/thmb/Yows2z4NyMHCj8ZSliqSupJ2RnE=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Vegetarian-Tortilla-Soup-LEAD-8-598c61d8e3aa425e8907cd337ff87ce9.jpg',
+      'https://e7.pngegg.com/pngimages/404/754/png-clipart-red-curry-tortilla-soup-menudo-vegetarian-cuisine-soup-kitchen-soup-food-thumbnail.png',
   },
 ];
 export const ItemSlider: React.FC = () => {

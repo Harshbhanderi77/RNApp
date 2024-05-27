@@ -1,19 +1,10 @@
-import React, {useEffect, useState} from 'react';
-import {
-  FlatList,
-  Image,
-  Modal,
-  Pressable,
-  StyleSheet,
-  Text,
-  TouchableOpacity,
-  View,
-} from 'react-native';
-import {color} from '../style/color';
-import {CustomHeader} from '../component/header/CustomHeader';
-import {navigate, Routes} from '../screennavigation/Navigation';
-import AsyncStorage from '@react-native-async-storage/async-storage';
-import {Images} from '../assets/pngimg/images';
+import React, { useEffect, useState } from "react";
+import { FlatList, Image, Modal, Pressable, StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import { color } from "../style/color";
+import { CustomHeader } from "../component/header/CustomHeader";
+import { navigate, Routes } from "../screennavigation/Navigation";
+import AsyncStorage from "@react-native-async-storage/async-storage";
+import { Images } from "../assets/pngimg/images";
 
 const initialMenuitemArray = [
   {
@@ -123,7 +114,7 @@ const initialMenuitemArray = [
     ItemPrice: '170.00',
     ItemQuentity: '150ml',
     ItemImage:
-      'https://www.simplyrecipes.com/thmb/Yows2z4NyMHCj8ZSliqSupJ2RnE=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Vegetarian-Tortilla-Soup-LEAD-8-598c61d8e3aa425e8907cd337ff87ce9.jpg',
+      'https://e7.pngegg.com/pngimages/404/754/png-clipart-red-curry-tortilla-soup-menudo-vegetarian-cuisine-soup-kitchen-soup-food-thumbnail.png',
     count: 1,
   },
 ];
@@ -275,8 +266,8 @@ export const CartScreen: React.FC = () => {
         keyExtractor={item => item.ItemId.toString()}
       />
       <View style={styles.contentfooter}>
-        <Pressable onPress={() => setModalVisible(true)}>
-          <Text style={styles.pay}>Pay Bill</Text>
+        <Pressable onPress={() => navigate({screenName: Routes.Home})}>
+          <Text style={styles.pay}>Check out</Text>
         </Pressable>
         <View
           style={{
@@ -344,7 +335,7 @@ export const CartScreen: React.FC = () => {
                   fontSize: 22,
                   marginTop: 10,
                 }}>
-                Paymeny Bill
+                Paymeny
               </Text>
             </View>
           </View>
