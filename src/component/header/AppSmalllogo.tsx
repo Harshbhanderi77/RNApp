@@ -2,8 +2,6 @@ import React from 'react';
 import {Image, Pressable, View} from 'react-native';
 import {color} from '../../style/color';
 import {Images} from '../../assets/pngimg/images';
-import {createDrawerNavigator} from '@react-navigation/drawer';
-const Drawer = createDrawerNavigator();
 
 export const AppSmalllogo: React.FC = () => {
   return (

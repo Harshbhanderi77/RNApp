@@ -1,10 +1,20 @@
-import React, { useEffect, useState } from "react";
-import { FlatList, Image, Modal, Pressable, StyleSheet, Text, TouchableOpacity, View } from "react-native";
-import { color } from "../style/color";
-import { CustomHeader } from "../component/header/CustomHeader";
-import { navigate, Routes } from "../screennavigation/Navigation";
-import AsyncStorage from "@react-native-async-storage/async-storage";
-import { Images } from "../assets/pngimg/images";
+import React, {useEffect, useState} from 'react';
+import {
+  FlatList,
+  Image,
+  Modal,
+  Pressable,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
+} from 'react-native';
+import {color} from '../style/color';
+import {CustomHeader} from '../component/header/CustomHeader';
+import {navigate, Routes} from '../screennavigation/Navigation';
+import AsyncStorage from '@react-native-async-storage/async-storage';
+import {Images} from '../assets/pngimg/images';
+import {addWhitelistedNativeProps} from 'react-native-reanimated/lib/typescript/ConfigHelper';
 
 const initialMenuitemArray = [
   {
@@ -12,7 +22,7 @@ const initialMenuitemArray = [
     CategoryId: 1,
     ItemName: 'Bajrano - Rotlo',
     ItemPrice: '50.00',
-    ItemQuentity: '100gm',
+    ItemQuentity: '100',
     ItemImage:
       'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTl3aKAlPWh0DjRnAupUeN6_jfRDcXBT-f26jP2d_WrsQ&s',
     count: 1,
@@ -24,7 +34,7 @@ const initialMenuitemArray = [
     ItemPrice: '100.00',
     ItemQuentity: '250gm',
     ItemImage:
-      'https://www.shutterstock.com/image-photo/gujarati-khaman-dhokla-made-using-600nw-1785410921.jpg',
+      'https://c.ndtvimg.com/2023-05/2siv51u_dhokla_625x300_22_May_23.jpg',
     count: 1,
   },
   {
@@ -34,7 +44,7 @@ const initialMenuitemArray = [
     ItemPrice: '150.00',
     ItemQuentity: '250gm',
     ItemImage:
-      'https://j6e2i8c9.rocketcdn.me/wp-content/uploads/2020/12/Paneer-butter-masala-recipe-3.jpg',
+      'https://5.imimg.com/data5/MI/HT/GLADMIN-29391765/paneer-butter-masala-recipe-500x500.png',
     count: 1,
   },
   {
@@ -74,7 +84,7 @@ const initialMenuitemArray = [
     ItemPrice: '150.00',
     ItemQuentity: '15 N',
     ItemImage:
-      'https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=1080/assets/search/usecase/paneer_manchurian_dry_zdish.png',
+      'https://t4.ftcdn.net/jpg/03/24/56/73/360_F_324567329_VIPsg4s4kWkvqJviANcIgeYPG602kN56.jpg',
     count: 1,
   },
   {
@@ -176,6 +186,29 @@ export const CartScreen: React.FC = () => {
     }
   };
 
+  const handleCheckout = async () => {
+    try {
+      await AsyncStorage.setItem('cart', '[]');
+      navigate({screenName: Routes.Home});
+    } catch (error) {
+      console.error('Error clearing cart:', error);
+    }
+    // try {
+    //   const cart = await AsyncStorage.getItem('cart');
+    //   let cartItems = cart ? JSON.parse(cart) : [];
+    //   cartItems = cartItems.map(item => {
+    //     if (item.id === 'specificItemId') {
+    //       return {...item, status: 'false'};
+    //     }
+    //     return item;
+    //   });
+    //   await AsyncStorage.setItem('cart', JSON.stringify(cartItems));
+    //   navigate({screenName: Routes.Home});
+    // } catch (error) {
+    //   console.error('Error updating cart:', error);
+    // }
+  };
+
   return (
     <View style={{backgroundColor: color.white, flex: 1}}>
       <CustomHeader label={'Food Cart'} />
@@ -266,7 +299,7 @@ export const CartScreen: React.FC = () => {
         keyExtractor={item => item.ItemId.toString()}
       />
       <View style={styles.contentfooter}>
-        <Pressable onPress={() => navigate({screenName: Routes.Home})}>
+        <Pressable onPress={handleCheckout}>
           <Text style={styles.pay}>Check out</Text>
         </Pressable>
         <View

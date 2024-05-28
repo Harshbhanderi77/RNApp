@@ -12,6 +12,7 @@ import {replace, Routes} from '../screennavigation/Navigation';
 import {Loginbutton} from '../component/Button/loginbutton';
 import {Logoscreen} from '../component/logoscreen';
 import {LoginScreentext} from '../component/LoginScreentext';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 export const SinginScreen: React.FC = () => {
   const [name, setName] = useState('');
@@ -70,7 +71,7 @@ export const SinginScreen: React.FC = () => {
   ];
 
   //validation
-  const handleLogin = () => {
+  const handlesingup = () => {
     let isValid = true;
 
     // names
@@ -123,12 +124,12 @@ export const SinginScreen: React.FC = () => {
     return isValid;
   };
 
-  const handleLoginPress = () => {
-    if (handleLogin()) {
-      console.log('Login successful');
+  const handleLoginPress = async () => {
+    if (handlesingup()) {
+      await AsyncStorage.setItem('singup', 'true');
       replace({screenName: Routes.Home});
     } else {
-      console.log('Login failed');
+      console.log('Singup failed');
     }
   };
 

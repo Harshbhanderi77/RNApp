@@ -38,7 +38,7 @@ const MenuitemArray = [
     ItemPrice: '100.00',
     ItemQuentity: '250gm',
     ItemImage:
-      'https://www.shutterstock.com/image-photo/gujarati-khaman-dhokla-made-using-600nw-1785410921.jpg',
+      'https://c.ndtvimg.com/2023-05/2siv51u_dhokla_625x300_22_May_23.jpg',
   },
   {
     ItemId: 4,
@@ -47,7 +47,7 @@ const MenuitemArray = [
     ItemPrice: '150.00',
     ItemQuentity: '250gm',
     ItemImage:
-      'https://j6e2i8c9.rocketcdn.me/wp-content/uploads/2020/12/Paneer-butter-masala-recipe-3.jpg',
+      'https://5.imimg.com/data5/MI/HT/GLADMIN-29391765/paneer-butter-masala-recipe-500x500.png',
   },
   {
     ItemId: 6,
@@ -83,7 +83,7 @@ const MenuitemArray = [
     ItemPrice: '150.00',
     ItemQuentity: '15 N',
     ItemImage:
-      'https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=1080/assets/search/usecase/paneer_manchurian_dry_zdish.png',
+      'https://t4.ftcdn.net/jpg/03/24/56/73/360_F_324567329_VIPsg4s4kWkvqJviANcIgeYPG602kN56.jpg',
   },
   {
     ItemId: 14,

@@ -3,6 +3,7 @@ import {Image, Pressable, View} from 'react-native';
 import {color} from '../../style/color';
 import {Images} from '../../assets/pngimg/images';
 import {replace, Routes} from '../../screennavigation/Navigation';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 export const Logout: React.FC = () => {
   return (
@@ -14,7 +15,10 @@ export const Logout: React.FC = () => {
           borderRadius: 24,
           elevation: 12,
         }}
-        onPress={() => replace({screenName: Routes.Login})}>
+        onPress={async () => {
+          await AsyncStorage.setItem('login', 'false');
+          replace({screenName: Routes.Login});
+        }}>
         <Image
           source={Images.logout}
           style={{

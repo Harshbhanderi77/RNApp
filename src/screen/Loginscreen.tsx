@@ -11,7 +11,8 @@ import {InputLogin} from '../component/categoryslider/InputLogin';
 import {replace, Routes} from '../screennavigation/Navigation';
 import {Loginbutton} from '../component/Button/loginbutton';
 import {Logoscreen} from '../component/logoscreen';
-import { LoginScreentext } from "../component/LoginScreentext";
+import {LoginScreentext} from '../component/LoginScreentext';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 export const Loginscreen: React.FC = () => {
   const [email, setEmail] = useState('');
@@ -78,9 +79,10 @@ export const Loginscreen: React.FC = () => {
     return isValid;
   };
 
-  const handleLoginPress = () => {
+  const handleLoginPress = async () => {
     if (handleLogin()) {
       console.log('Login successful');
+      await AsyncStorage.setItem('login', 'true');
       replace({screenName: Routes.Home});
     } else {
       console.log('Login failed');

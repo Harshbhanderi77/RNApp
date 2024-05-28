@@ -12,7 +12,7 @@
   "dependencies": {
     "@nozbe/watermelondb": "^0.27.1",
     "@react-native-async-storage/async-storage": "^1.19.1",
-    "@react-native-camera-roll/camera-roll": "^7.5.1",
+    "@react-native-community/cli-doctor": "^13.6.6",
     "@react-native-community/geolocation": "^3.2.1",
     "@react-native-community/netinfo": "^9.4.1",
     "@react-native-firebase/app": "^19.1.2",
